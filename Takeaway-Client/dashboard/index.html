@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Dashboard</title>
+  <!-- Box Icon CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Sidebar start Here -->
+    <div class="sidebar open">
+      <ul class="nav-list">
+        <li>
+          <a href="#" onclick="openTab(event, 'tab1')">
+            <i class='bx bx-chat'></i>
+            <span class="links_name">All Products</span>
+          </a>
+          <span class="tooltip">All Products</span>
+        </li>
+        <li>
+          <a href="#" class="tablinks" onclick="openTab(event, 'tab2')">
+            <i class='bx bx-user'></i>
+            <span class="links_name">Add Product</span>
+          </a>
+          <span class="tooltip">Add Product</span>
+        </li>
+        <li>
+          <a href="#" class="tablinks" onclick="openTab(event, 'tab3')">
+            <i class='bx bx-user'></i>
+            <span class="links_name">All Orders</span>
+          </a>
+          <span class="tooltip">All Orders</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar end Here -->
+    <div class="app-content">
+      <!-- header start here -->
+      <div class="app-header">
+        <div class="app-header-left">
+          <!-- <span class="app-icon"></span> -->
+          <p class="app-name">Admin Dashboard</p>
+
+        </div>
+      </div>
+      <!-- header end here -->
+      <div id="tab1" class="tabcontent">
+        <div class="app-content-actions">
+          All Products Here
+        </div>
+        <div class="products-area-wrapper tableView">
+          <div class="products-header">
+            <div class="product-cell image">
+              Items
+              <button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-cell category">Brand<button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button></div>
+            <div class="product-cell status-cell">Description<button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button></div>
+
+
+            <div class="product-cell price">Price<button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button></div>
+          </div>
+
+
+          <div id="products-container"></div>
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div id="tab3" class="tabcontent">
+        <div class="app-content-actions">
+          All Orders Here
+        </div>
+        <div class="products-area-wrapper tableView">
+          <div class="products-header">
+            <div class="product-cell image">
+              Items
+              <button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-cell category">Brand<button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button></div>
+            <div class="product-cell status-cell">Description<button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button></div>
+
+
+            <div class="product-cell price">Price<button class="sort-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z" />
+                </svg>
+              </button></div>
+          </div>
+          <div id="orders-container"></div>
+          <!-- <div class="products-row">
+            <div class="product-cell image">
+              <img
+                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="product">
+              <span>Lou</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Kitchen</div>
+            <div class="product-cell status-cell">
+              <span class="cell-label">Status:</span>
+              <span class="status active">Active</span>
+            </div>
+            <div class="product-cell price"><span class="cell-label">Price:</span>$710</div>
+          </div> -->
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div id="tab2" class="tabcontent">
+        Add New Product
+        <div class="form-container">
+          <div class="form-group">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" required>
+          </div>
+          <div class="form-group">
+            <label for="productDescription">Product Description:</label>
+            <textarea id="productDescription" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="productPrice">Product Price:</label>
+            <input type="number" id="productPrice" step="0.01" required>
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand Name:</label>
+            <input type="text" id="brand" required>
+          </div>
+          <div class="form-group">
+            <label for="productImage">Product Image URL:</label>
+            <input type="url" id="productImage" required>
+          </div>
+          <div class="form-group">
+            <button type="button" onclick="addProduct()">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function deleteProduct(productId) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("DELETE", "http://localhost:1222/delete/post/" + productId);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // Product successfully deleted, you can update the UI here if needed.
+        } else {
+          console.error("Error deleting product:", xhr.statusText);
+        }
+      };
+      xhr.onerror = function() {
+        console.error("Network error");
+      };
+      xhr.send();
+    }
+
+    function deleteOrder(productId) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("DELETE", "http://localhost:1222/delete/post/" + productId);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // Product successfully deleted, you can update the UI here if needed.
+        } else {
+          console.error("Error deleting product:", xhr.statusText);
+        }
+      };
+      xhr.onerror = function() {
+        console.error("Network error");
+      };
+      xhr.send();
+    }
+    // Function to make XMLHTTPRequest
+    function makeRequest(method, url) {
+      return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            resolve(xhr.responseText);
+          } else {
+            reject(xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          reject("Network error");
+        };
+        xhr.send();
+      });
+    }
+
+    // Function to display products
+    function displayProducts(products) {
+      var productsContainer = document.getElementById("products-container");
+
+      products.forEach(function (product) {
+        var productDiv = document.createElement("div");
+        productDiv.classList.add("products-row");
+
+        var imageDiv = document.createElement("div");
+        imageDiv.classList.add("product-cell", "image");
+        var image = document.createElement("img");
+        image.src = product.photos;
+        image.alt = product.name;
+        imageDiv.appendChild(image);
+        var nameSpan = document.createElement("span");
+        nameSpan.textContent = product.name;
+        imageDiv.appendChild(nameSpan);
+        productDiv.appendChild(imageDiv);
+
+        var categoryDiv = document.createElement("div");
+        categoryDiv.classList.add("product-cell", "brand");
+        categoryDiv.textContent = product.brand;
+        productDiv.appendChild(categoryDiv);
+
+        var descriptionDiv = document.createElement("div");
+        descriptionDiv.classList.add("product-cell", "status-cell");
+        descriptionDiv.textContent = product.description;
+        productDiv.appendChild(descriptionDiv);
+
+        var priceDiv = document.createElement("div");
+        priceDiv.classList.add("product-cell", "price");
+        var priceLabelSpan = document.createElement("span");
+        priceLabelSpan.classList.add("cell-label");
+        priceLabelSpan.textContent = "Price:";
+        priceDiv.appendChild(priceLabelSpan);
+        var priceSpan = document.createElement("span");
+        priceSpan.textContent = "$" + product.price;
+        priceDiv.appendChild(priceSpan);
+        productDiv.appendChild(priceDiv);
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function() {
+          deleteProduct(product.id);
+          productDiv.remove(); // Remove the product from the UI after deletion
+        };
+        productDiv.appendChild(deleteButton);
+
+        productsContainer.appendChild(productDiv);
+      });
+    }
+
+    function displayOrders(products) {
+      var productsContainer = document.getElementById("orders-container");
+
+      products.forEach(function (product) {
+        var productDiv = document.createElement("div");
+        productDiv.classList.add("products-row");
+
+        var imageDiv = document.createElement("div");
+        imageDiv.classList.add("product-cell", "image");
+        var image = document.createElement("img");
+        image.alt = product.name;
+        imageDiv.appendChild(image);
+        var nameSpan = document.createElement("span");
+        nameSpan.textContent = product.name;
+        imageDiv.appendChild(nameSpan);
+        productDiv.appendChild(imageDiv);
+
+        var categoryDiv = document.createElement("div");
+        categoryDiv.classList.add("product-cell", "brand");
+        categoryDiv.textContent = product.brand;
+        productDiv.appendChild(categoryDiv);
+
+        var descriptionDiv = document.createElement("div");
+        descriptionDiv.classList.add("product-cell", "status-cell");
+        descriptionDiv.textContent = product.description;
+        productDiv.appendChild(descriptionDiv);
+
+        var priceDiv = document.createElement("div");
+        priceDiv.classList.add("product-cell", "price");
+        var priceLabelSpan = document.createElement("span");
+        priceLabelSpan.classList.add("cell-label");
+        priceLabelSpan.textContent = "Price:";
+        priceDiv.appendChild(priceLabelSpan);
+        var priceSpan = document.createElement("span");
+        priceSpan.textContent = "$" + product.price;
+        priceDiv.appendChild(priceSpan);
+        productDiv.appendChild(priceDiv);
+
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function() {
+          deleteOrder(product.id);
+          productDiv.remove(); // Remove the product from the UI after deletion
+        };
+        productDiv.appendChild(deleteButton);
+
+        productsContainer.appendChild(productDiv);
+      });
+    }
+
+
+    // Fetch products from the API and display them
+    makeRequest("GET", "http://localhost:1222/posts")
+      .then(function (response) {
+        var products = JSON.parse(response);
+        displayProducts(products);
+      })
+      .catch(function (error) {
+        console.error("Error fetching products:", error);
+      });
+
+      makeRequest("GET", "http://localhost:1222/orders")
+      .then(function (response) {
+        var products = JSON.parse(response);
+        displayOrders(products);
+      })
+      .catch(function (error) {
+        console.error("Error fetching products:", error);
+      });
+  </script>
+  <!-- Box Icon Js -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <!-- Main Js -->
+  <script src="index.js"></script>
+</body>
+
+</html>
